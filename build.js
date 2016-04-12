@@ -14,7 +14,12 @@ var config = {
   },
   module: {
     loaders: [
-      {test: /\.jsx$/, loader: 'jsx-loader'}
+      { test: /\.jsx$/, loader: 'jsx-loader' },
+      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader",
+        query: {
+          presets: ['es2015', 'react']
+        }
+      }
     ]
   }
 };
