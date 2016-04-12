@@ -59,6 +59,8 @@ var Day = React.createClass({
             <div className='days'>
                 <p className="day">Day : {day} </p>
                 <p className="location">Location : {location} </p>
+                <button>Delete day</button>
+                <button>Edit day</button>
                 {chargesTemplate}
                 <p className="total_day">Total : {total_day} </p>
             </div>
@@ -101,7 +103,8 @@ var Week = React.createClass({
         });
         return (
             <div className='weeks'>
-                <span className="number_week">This week : {number_week} </span>
+                <p className="number_week">This week : {number_week} </p>
+                <button>Add new day</button>
                 {daysTemplate}
                 {totalWeekTemplate}
             </div>
