@@ -1,10 +1,11 @@
 import * as types from '../constants/ActionTypes';
 
-export function addFriend(name,location) {
+export function addFriend(name,location,charges) {
   return {
     type: types.ADD_FRIEND,
     name,
-    location
+    location,
+    charges
   };
 }
 

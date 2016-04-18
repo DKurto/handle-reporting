@@ -26,8 +26,7 @@ export default class FriendList extends Component {
               starred={friend.starred}
               {...this.props.actions} />);
             })
-          })
-        }
+          }
       </ul>
     );
   }

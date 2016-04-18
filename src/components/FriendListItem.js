@@ -25,7 +25,9 @@ export default class FriendListItem extends Component {
           <button className={`btn btn-default ${styles.btnAction}`} onClick={() => this.props.deleteFriend(this.props.id)}>
             <i className="fa fa-trash" />
           </button>
-            <button onClick={() => this.props.addFriend('Monday','Minsk')}>
+            <button onClick={() => this.props.addFriend('Monday','Minsk',{1:{charge: 'Taxi99', cost: 20, currency: 'USD'},
+                2:{charge: 'Visa', cost: 40, currency: 'USD'}
+              })}>
                 Create
             </button>
         </div>

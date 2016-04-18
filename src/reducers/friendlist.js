@@ -51,7 +51,7 @@ export default function friends(state = initialState, action) {
             id: newId,
             name: action.name,
             location: action.location,
-            changes: action.location
+            charges: action.charges
           }
         },
       }

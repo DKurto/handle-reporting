@@ -22,8 +22,8 @@ export default class FriendListApp extends Component {
 
     return (
       <div className={styles.friendListApp}>
-        <h1>The FriendList</h1>
-        <AddFriendInput addFriend={actions.addFriend} />
+        <h1>Ivan Ivanov</h1>
+          <AddFriendInput addFriend={actions.addFriend} />
         <FriendList friends={friendsById} actions={actions} />
       </div>
     );
