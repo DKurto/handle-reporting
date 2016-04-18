@@ -62,10 +62,11 @@ export default function friends(state = initialState, action) {
         friendsById: omit(state.friendsById, action.id)
       }
 
-    case types.STAR_FRIEND:
+    case types.ADD_CHARDE:
       return {
         ...state,
         friendsById: mapValues(state.friendsById, (friend) => {
+          debugger;
           return friend.id === action.id ?
             assign({}, friend, { starred: !friend.starred }) :
             friend

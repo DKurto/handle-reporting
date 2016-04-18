@@ -16,9 +16,9 @@ export function deleteFriend(id) {
   };
 }
 
-export function starFriend(id) {
+export function addCharge(charge) {
   return {
-    type: types.STAR_FRIEND,
-    id
+    type: types.ADD_CHARGE,
+    charge
   };
 }

@@ -30,6 +30,9 @@ export default class FriendListItem extends Component {
               })}>
                 Create
             </button>
+            <button onClick={() => this.props.addCharge(this.props.id)}>
+                Add Charge
+            </button>
         </div>
       </li>
     );
