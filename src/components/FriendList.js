@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import mapValues from 'lodash/object/mapValues';
-
 import styles from './FriendList.css';
 import FriendListItem from './FriendListItem';
+import createFragment from 'react-addons-create-fragment';
 
 export default class FriendList extends Component {
   static propTypes = {
@@ -14,19 +14,14 @@ export default class FriendList extends Component {
     return (
       <ul className={styles.friendList}>
         {
-          mapValues(this.props.friends, (friend) => {
+          mapValues(createFragment(this.props.friends), (friend) => {
             return (<FriendListItem
-              key={friend.id}
-              id={friend.id}
-              name={friend.name}
-              location={friend.location}
-              charge={mapValues(friend.charges, (charge) => {
-                  return (<p>{charge.charge} {charge.cost} {charge.currency}</p>);
-              })}
-              starred={friend.starred}
-              {...this.props.actions} />);
-            })
-          }
+                name={friend.name.toString()}
+                location={friend.location}
+                {...this.props.actions} />);
+          })
+
+        }
       </ul>
     );
   }

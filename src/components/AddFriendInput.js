@@ -1,11 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import styles from './AddFriendInput.css';
+import { browserHistory } from 'react-router';
+import { Router, Route } from 'react-router'
+var clickHandler = () =>
+{
+    browserHistory.push('new_day')};
 
 export default class AddFriendInput extends Component {
-  static propTypes = {
+  /*static propTypes = {
     addFriend: PropTypes.func.isRequired
-  }
+  }*/
 
   render () {
     return (
@@ -26,7 +31,7 @@ export default class AddFriendInput extends Component {
             value={this.state.location}
             onChange={this.handleChangeLocation.bind(this)}
         />
-          <button onClick={() => this.props.addFriend(
+        <button onClick={() => this.props.addFriend(
             this.state.name,
             this.state.location,
             {
@@ -35,6 +40,7 @@ export default class AddFriendInput extends Component {
               })}>
           Add
         </button>
+        <button onClick={clickHandler}>Add new day</button>
         </div>
     );
   }
